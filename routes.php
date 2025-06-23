@@ -19,4 +19,5 @@ $router->post('/register', 'registration/store.php')->only('guest');
 
 $router->get('/login', 'session/create.php')->only('guest');
 $router->post('/session', 'session/store.php')->only('guest');
-$router->delete('/session', 'session/destroy.php')->only('auth');
+$router->delete('/session', 'session/destroy.php')->only('guest');
+$router->get("service" , "controllers/service.php");
